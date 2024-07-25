@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: rgb(34, 33, 33);
+  padding-top: 20px;
+}
+
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background: rgba(255, 255, 255, 0);
+  backdrop-filter: blur(0px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0);
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease, backdrop-filter 0.3s ease,
+    border-bottom 0.3s ease; /* Smooth transition */
+}
+
+.navbar.scrolled {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbar.scrolled a {
+  color: green;
+  transition: all 0.3s;
+}
+
+.navbar.scrolled a:hover {
+  background-color: rgb(84, 197, 84);
+
+  color: rgb(1, 68, 1);
+}
+
+.navbar a {
+  color: white; /* Text color */
+  text-decoration: none;
+  padding: 0 15px; /* Horizontal padding */
+  line-height: 60px; /* Align text vertically */
+}
+
+.navbar a:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.menu-icon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  cursor: pointer; /* Make the cursor a pointer */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  margin-left: 35%;
+}
+
+.icon-logo {
+  margin-right: 35%;
+}
+
+.menu-icon div {
+  width: 100%;
+  height: 4px;
+  background-color: rgb(12, 99, 16);
+  position: absolute;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border-radius: 10px;
+  z-index: 1001;
+}
+
+.menu-icon div:nth-child(1) {
+  top: 0;
+}
+
+.menu-icon div:nth-child(2) {
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1001;
+}
+
+.menu-icon div:nth-child(3) {
+  bottom: 0;
+}
+
+.menu-icon.open div:nth-child(1) {
+  transform: rotate(45deg);
+  top: 50%;
+  background-color: wheat;
+  z-index: 1001;
+}
+
+.menu-icon.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-icon.open div:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 50%;
+  background-color: wheat;
+  z-index: 1001;
+}
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -250px;
+  width: 200px;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: right 0.3s ease;
+  z-index: 0;
+  opacity: 0.5;
+}
+
+.sidebar.open {
+  right: 0;
+}
+
+.sidebar a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  text-align: center;
+  cursor: pointer;
+}
