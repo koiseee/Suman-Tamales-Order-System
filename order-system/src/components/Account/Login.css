@@ -1,0 +1,81 @@
+* {
+  box-sizing: border-box;
+}
+
+.login-page {
+  width: 100%;
+  height: 100dvh;
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(144, 238, 144, 0.5)
+  );
+  display: flex;
+  justify-content: center;
+  z-index: -1;
+  align-items: center;
+}
+
+.login-wave {
+  display: block;
+  width: 115rem;
+  height: 100%;
+  background: url("wave-new.svg") no-repeat center center;
+  background-size: cover;
+  margin-left: -400px;
+  position: absolute;
+}
+
+.login-container {
+    z-index: 1;
+    background-color: rgba(0, 128, 0, 0.137);   
+    height: 70%;
+    display: flex;
+    width: 25%;
+    margin-left: 55em;
+    justify-content: center;
+    border-radius: 20px;
+}
+
+.login-container h1 {
+    justify-content: center;
+    display: flex;
+    font-weight: 800;
+    font-size: 50px;
+    letter-spacing: 4px;
+    margin-top: 20px;
+    color: rgb(1, 71, 1);
+    user-select: none;
+}
+
+.login-form {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+.login-button {
+    margin-top: 10px;
+    width: 100%;
+    height: 30px;
+    color: green;
+    box-shadow: 0 0 3px 2px rgba(0, 0, 0, 0.158);
+}
+
+.line-login {
+    margin-top: 30px;
+    height: 1px;
+    width: 20%;
+    border: 1px solid rgba(0, 36, 8, 0.137);
+    position: absolute;
+    margin-left: -262px;
+    margin-top: 60px;
+}
+
+.register-link {
+    margin-top: 40px;
+    font-size: 14px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}

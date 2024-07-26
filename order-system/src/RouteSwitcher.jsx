@@ -13,7 +13,7 @@ export default function RouteSwitcher() {
       <CSSTransition key={location.key} classNames="fade" timeout={300}>
         <div>
           <Routes location={location}>
-            <Route path="/" element={<Home />} />
+            <Route path="/home" element={<Home />} />
             <Route path="/menu" element={<MenuHome />} />
             <Route path="/order" element={<Order />} />
           </Routes>
